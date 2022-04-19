@@ -12,24 +12,20 @@ class Chicken {//tạo lớp con gà
     }
 
     draw() { //vẽ gà
-        this._pen.beginPath();
-        // this._pen.rect(this._x, this._y, this._width, this._height);
-        // this._pen.stroke();
-        let img = document.getElementById('duck1')
-        this._pen.drawImage(img,this._x,this._y,this._width,this._height);
+        if (this._status) {
+            this._pen.beginPath();
+            let img = document.getElementById('duck1')
+            this._pen.drawImage(img,this._x,this._y,this._width,this._height);
+        }
+
     }
     
     move() {  //tạo phương thức di chuyển
-        //this.clearCanvas()
         this._x += this._speedX;
         this._y += this._speedY;
         this.draw();
         this.collision();
     }
-
-    // clearCanvas() {
-    //     this._pen.clearRect(0, 0, this._canvas.width, this._canvas.height)//xoá hình tạo di chuyển
-    // }
 
     collision() {
         if (this._x + this._width >= this._canvas.width) {
