@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c29a0cb0-8a43-4fe5-b972-28f53c5c2a1e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Chicken.js" beforeDir="false" afterPath="$PROJECT_DIR$/Chicken.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +54,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -66,7 +70,9 @@
       <workItem from="1650074948781" duration="2522000" />
       <workItem from="1650112975783" duration="301000" />
       <workItem from="1650243997539" duration="25051000" />
-      <workItem from="1650330611536" duration="1535000" />
+      <workItem from="1650330611536" duration="24876000" />
+      <workItem from="1650382442450" duration="2000" />
+      <workItem from="1650416480116" duration="6526000" />
     </task>
     <servers />
   </component>

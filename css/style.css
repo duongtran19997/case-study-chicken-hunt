@@ -1,0 +1,62 @@
+.canvas{
+   border: 1px solid red;
+   width: 100%;
+   height: 100%;
+   margin-top: 0;
+}
+.score{
+   color: black;
+   position: absolute;
+   top: 7%;
+   left: 92%;
+   font-size: 30px;
+   border: 2px solid rgb(5,163,102);
+   padding: 7px;
+   transform:translate(-50%);
+   width: 135px;
+}
+.time{
+   color: black;
+   position: absolute;
+   top: 21%;
+   left: 92%;
+   font-size: 30px;
+   border: 2px solid rgb(5,163,102);
+   padding: 7px;
+   transform:translate(-50%);
+   width: 135px;
+}
+#start{
+   color: black;
+   position: absolute;
+   top: 30%;
+   left: 92%;
+   font-size: 30px;
+   border: 2px solid rgb(5,163,102);
+   padding: 7px;
+   transform:translate(-50%);
+   width: 135px;
+}
+#reset{
+   color: black;
+   position: absolute;
+   top: 40%;
+   left: 92%;
+   font-size: 30px;
+   border: 2px solid rgb(5,163,102);
+   padding: 7px;
+   transform:translate(-50%);
+   width: 135px;
+}
+#nextlevel{
+   color: black;
+   position: absolute;
+   top: 50%;
+   left: 92%;
+   font-size: 30px;
+   border: 2px solid rgb(5,163,102);
+   padding: 7px;
+   transform:translate(-50%);
+ width: 135px
+ /*\*cách để hoa mắt chóng mặt*!*/
+}

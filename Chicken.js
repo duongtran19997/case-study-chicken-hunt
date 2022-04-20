@@ -1,9 +1,9 @@
 class Chicken {//tạo lớp con gà
-    constructor(x, y, width, height) {
+    constructor(x, y, width, height,speed) {
         this._x = x;
         this._y = y;
-        this._speedX = 5;
-        this._speedY = 5;
+        this._speedX = speed;
+        this._speedY = speed;
         this._status = true;
         this._width = width;
         this._height = height;
@@ -25,9 +25,10 @@ class Chicken {//tạo lớp con gà
         this._y += this._speedY;
         this.draw();
         this.collision();
+
     }
 
-    collision() {
+    collision() {//check va chạm với canvas
         if (this._x + this._width >= this._canvas.width) {
             this._speedX = -this._speedX
         }

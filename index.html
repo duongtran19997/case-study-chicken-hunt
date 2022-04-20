@@ -3,14 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Chick-hunt</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    #canvas{
+        cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f525.png) 35 35, auto;
+
+    }
+    #canvas:active{
+        cursor: crosshair;
+    }
+</style>
 <body>
-<canvas id="canvas" width="1000px" height="570px" >
+<div class="score" id="scores">SCORE : <span id="scorecount">0</span></div>
+<div class="time" id="times">TIME : <span id="timecount">0</span></div>
+
+<canvas id="canvas" width="1000px" height="570px">
     <img id="background1" src="background.jpg">
-    <img id="duck1" src="duck.png" height="70" width="93">
+    <img id="duck1" src="roastedduck.png">
 </canvas>
-    <script src="Chicken.js"></script>
-    <script src="main.js"></script>
+<button id="start" onclick="start()">START</button>
+<br>
+<button id="reset" onclick="reset()">RESET</button>
+<br>
+<!--<button id="nextlevel" onclick="nextLevel()">NEXTLEVEL</button>;-->
+
+<script src="Chicken.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
