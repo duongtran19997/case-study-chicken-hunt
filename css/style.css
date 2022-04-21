@@ -56,6 +56,10 @@
    transform:translate(-50%);
    width: 135px;
 }
+body{
+   background-image: url(../startgame.jpg);
+   background-size: 1250px;
+}
 /*#nextlevel{*/
 /*   color: black;*/
 /*   position: absolute;*/
