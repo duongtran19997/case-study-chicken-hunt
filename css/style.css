@@ -4,6 +4,14 @@
    height: 100%;
    margin-top: 0;
 }
+#canvas {
+   cursor: url(https://abs.twimg.com/emoji/v2/72x72/1f525.png) 35 35, auto;
+
+}
+
+#canvas:active {
+   cursor: crosshair;
+}
 .score{
    color: black;
    position: absolute;
@@ -18,7 +26,7 @@
 .time{
    color: black;
    position: absolute;
-   top: 21%;
+   top: 22%;
    left: 92%;
    font-size: 30px;
    border: 2px solid rgb(5,163,102);
@@ -29,7 +37,7 @@
 #start{
    color: black;
    position: absolute;
-   top: 30%;
+   top: 32%;
    left: 92%;
    font-size: 30px;
    border: 2px solid rgb(5,163,102);
@@ -48,15 +56,15 @@
    transform:translate(-50%);
    width: 135px;
 }
-#nextlevel{
-   color: black;
-   position: absolute;
-   top: 50%;
-   left: 92%;
-   font-size: 30px;
-   border: 2px solid rgb(5,163,102);
-   padding: 7px;
-   transform:translate(-50%);
- width: 135px
- /*\*cách để hoa mắt chóng mặt*!*/
-}
+/*#nextlevel{*/
+/*   color: black;*/
+/*   position: absolute;*/
+/*   top: 50%;*/
+/*   left: 92%;*/
+/*   font-size: 30px;*/
+/*   border: 2px solid rgb(5,163,102);*/
+/*   padding: 7px;*/
+/*   transform:translate(-50%);*/
+/* !*width: 135px*!*/
+/* !*\*cách để hoa mắt chóng mặt*!*!*/
+/*}*/

@@ -9,14 +9,13 @@ let speed = 5;
 let gameOver = true;
 let count = 0;
 let reloadTime = 80;
-
+let mySound = new sound('vitchet.mp3')
+let endgameSound = new sound('endgame.mp3')
 function creatChick(totalChickens) {
     for (let i = 0; i < totalChickens; i++) {
         let x = randomNumber(0, 800);
         let y = randomNumber(0, 400);
         let width = randomNumber(50, 200)
-        // let height = randomNumber(50, 200)
-        // let speed = 5
         let chicken = new Chicken(x, y, width, width, speed);
         chicken.speedX = speed;
         chicken.speedY = speed;
@@ -36,34 +35,35 @@ function background() {
 }
 
 
-
 function main() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        background();
-        checkWin();
-        console.log(checkWin());
-        countTime();
-        for (let chicken of chickens) {
-            chicken.move();
-        }
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    background();
+    checkWin();
+    console.log(checkWin());
+    countTime();
+    for (let chicken of chickens) {
+        chicken.move();
+    }
 
-    if(checkWin() === true){
+    if (checkWin() === true) {
         nextLevel();
         time += 10;
     }
 
-    if (!gameOver){
-    requestAnimationFrame(main)}
-    else{
+    if (!gameOver) {
+        requestAnimationFrame(main)
+    } else {
         drawgameEnd()
     }
 }
-function drawgameEnd(){
-    ctx.textAlign='center';
-    ctx.fillStyle='black';
+
+function drawgameEnd() {
+    ctx.textAlign = 'center';
+    ctx.fillStyle = 'black';
     ctx.font = '50px Consolas'
-    ctx.fillText('Game Over:your score is '+ score, canvas.width/2,300)
+    ctx.fillText('Game Over:your score is ' + score, canvas.width / 2, 300)
 }
+
 function start() {
     gameOver = false;
     creatChick(totalChickens);
@@ -80,12 +80,16 @@ function resetScore() {
     score = 0;
     scorecount.innerHTML = score;
 }
+function resetSpeed(){
+    speed = 5
+}
 
 function reset() {
     gameOver = false;
     resetScore();
     resetChicken();
     resetTime();
+    resetSpeed()
 }
 
 function clearAll() {
@@ -93,16 +97,17 @@ function clearAll() {
 }
 
 function countTime() {
-        count++;
-        if (count >= reloadTime) {
-            time--;
-            count = 0;
-        }
-        timecount.innerHTML = time
-        if (time === -1) {
-            checkLose();
-            time = 0;
-        }
+    count++;
+    if (count >= reloadTime) {
+        time--;
+        count = 0;
+    }
+    timecount.innerHTML = time
+    if (time === -1) {
+        checkLose();
+        time = 0;
+        endgameSound.play();
+    }
 }
 
 function resetTime() {
@@ -121,7 +126,7 @@ function checkWin() {
             return false;
         }
     }
-    return  true;
+    return true;
 }
 
 function upSpeed() {
@@ -135,7 +140,21 @@ function nextLevel() {
         resetTime();
     }
 }
-
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    // this.sound.setAttribute("preload", "auto");
+    // this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    this.sound.loop=false;
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+}
 canvas.addEventListener('click', function (event) {
         let x = event.offsetX;
         let y = event.offsetY;
@@ -148,6 +167,7 @@ canvas.addEventListener('click', function (event) {
                     // console.log(1)
                     chickens[i]._status = false;
                     console.log(chickens[i]._status);
+                    mySound.play();
                     score++;
                     scorecount.innerHTML = score;
                 }
